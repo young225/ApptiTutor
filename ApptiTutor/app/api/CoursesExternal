@@ -1,0 +1,14 @@
+module CoursesExternal
+ 
+  class API < Grape::API
+    version 'v1', :using => :path
+    format :json
+ 
+    helpers do
+    end
+ 
+    resource :courses do
+    end
+  end
+ 
+end
