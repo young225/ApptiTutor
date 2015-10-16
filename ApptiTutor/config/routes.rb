@@ -1,5 +1,8 @@
+
 Rails.application.routes.draw do
+  devise_for :userlogins
   resources :courses
+  resources :skills
   resources :users
   get 'pages/Search'
 
@@ -70,3 +73,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+>>>>>>> Jooshman/master:config/routes.rb
