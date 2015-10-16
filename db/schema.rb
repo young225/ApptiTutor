@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015234336) do
+ActiveRecord::Schema.define(version: 20151016064553) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "subject"
@@ -28,18 +28,28 @@ ActiveRecord::Schema.define(version: 20151015234336) do
   end
 
   create_table "userlogins", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                    default: "", null: false
+    t.string   "encrypted_password",       default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",            default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.boolean  "isTutor"
+    t.boolean  "recieveReminders"
+    t.string   "profilePicture"
+    t.string   "passwordRecoverQuestion1"
+    t.string   "passwordRecoverQuestion2"
+    t.string   "passwordRecoverAnswer1"
+    t.string   "passwordRecoverAnswer2"
+    t.boolean  "isStudent"
+    t.string   "aboutMe"
+    t.string   "gender"
   end
 
   add_index "userlogins", ["email"], name: "index_userlogins_on_email", unique: true

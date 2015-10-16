@@ -1,5 +1,6 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<p class = "notice"><%= notice %></p>
+<p class = "alert"><%= alert %></p>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -22,10 +23,54 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+
   <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :isTutor %><br />
+    <%= f.check_box :isTutor, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :recieveReminders %><br />
+    <%= f.check_box :recieveReminders, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :profilePicture %><br />
+    <%= f.text_field :profilePicture, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :passwordRecoverQuestion1 %><br />
+    <%= f.text_field :passwordRecoverQuestion1, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :passwordRecoverQuestion2 %><br />
+    <%= f.text_field :passwordRecoverQuestion2, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :passwordRecoverAnswer1 %><br />
+    <%= f.text_field :passwordRecoverAnswer1, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :passwordRecoverAnswer2 %><br />
+    <%= f.text_field :passwordRecoverAnswer2, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :isStudent %><br />
+    <%= f.check_box :isStudent, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label :aboutMe %><br />
+    <%= f.text_field :aboutMe, autocomplete: "off" %>
+
+
+
+<div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+
 
   <div class="actions">
     <%= f.submit "Update" %>
