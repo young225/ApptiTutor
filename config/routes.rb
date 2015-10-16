@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :userlogins
+  resources :courses
+  resources :skills
   resources :users
   get 'pages/Search'
 
