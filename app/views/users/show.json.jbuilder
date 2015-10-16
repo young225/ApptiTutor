@@ -1,1 +1,0 @@
-json.extract! @user, :id, :username, :password, :email, :isTutor, :recieveReminders, :profilePicture, :passwordRecoverQuestion1, :passwordRecoverQuestion2, :passwordRecoverAnswer1, :passwordRecoverAnswer2, :isStudent, :aboutMe, :created_at, :updated_at
