@@ -2,8 +2,8 @@
 
 one:
   subject: MyString
-  id: MyString
+  course_Num: MyString
 
 two:
   subject: MyString
-  id: MyString
+  course_Num: MyString
